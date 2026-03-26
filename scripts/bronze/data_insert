@@ -29,7 +29,7 @@ BEGIN
 
         SELECT @cnt = COUNT(*) FROM bronze.crm_cust_info;
         PRINT 'Rows Loaded (crm_cust_info): ' + CAST(@cnt AS VARCHAR);
-        PRINT 'Time Taken to Load Rows (crm_cust_info): ' + CAST(DATEDIFF(second, @start_time, @end_time) AS VARCHAR) + 'Seconds'; -- not working for now idk why
+        PRINT 'Time Taken to Load Rows (crm_cust_info): ' + CAST(DATEDIFF(second, @start_time, @end_time) AS VARCHAR) + 'Seconds'; 
 
 
         /*=========================================================
@@ -149,7 +149,7 @@ BEGIN
 
 
         SET @end_batch = GETDATE();
-        print 'Total Time taken to load Everything : ' + CAST(DATEDIFF(second, @start_batch, @end_batch) as NVARCHAR) + 'Seconds'; -- Also not working for now
+        print 'Total Time taken to load Everything : ' + CAST(DATEDIFF(second, @start_batch, @end_batch) as NVARCHAR) + 'Seconds'; 
         PRINT '========== Bronze Load Completed Successfully ==========';
         
     END TRY
